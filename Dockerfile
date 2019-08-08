@@ -1,4 +1,4 @@
-FROM debian:jessie-slim
+FROM debian
 # Install kubectl
 RUN version=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt) && \
     curl -LO https://storage.googleapis.com/kubernetes-release/release/`echo $version`/bin/linux/amd64/kubectl && \
