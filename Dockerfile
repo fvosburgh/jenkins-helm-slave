@@ -1,4 +1,8 @@
-FROM ubuntu
+FROM ubuntu:trusty
+
+#install curl
+RUN apt-get update && apt-get install -y curl
+
 # Install kubectl
 RUN version=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt) && \
     curl -LO https://storage.googleapis.com/kubernetes-release/release/`echo $version`/bin/linux/amd64/kubectl && \
