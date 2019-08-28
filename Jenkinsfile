@@ -32,7 +32,7 @@ spec:
       container(name: 'kaniko-yaml', shell: '/busybox/sh') {
         withEnv(['PATH+EXTRA=/busybox:/kaniko']) {
           sh '''#!/busybox/sh
-          /kaniko/executor -f `pwd`/Dockerfile -c `pwd` /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --destination=harbor.azure.training.boxboat.io/library/helm-slave
+          /kaniko/executor -f `pwd`/Dockerfile -c `pwd` /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --destination=poc-dtr-1.boxboat.net/admin/demo/helm-slave
           '''
         }
       }
